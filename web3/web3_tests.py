@@ -34,17 +34,9 @@ def tests_for_web3_dz2():
 
 
 def tests_for_web3_dz3():
-	# TODO 1: Переделать
+	'''Тесты задачи 3'''
 	assert web3_dz3.reversem(
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.	Nulla quis "
-		"lorem ut libero malesuada feugiat. " \
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit.	Donec "
-		"rutrum congue leo eget malesuada.	" \
-		"Cras ultricies ligula sed magna dictum porta."
-	) == "atrop mutcid angam des alugil seicirtlu sarC	adauselam tege oel eugnoc " \
-	     "murtur cenoD	tile gnicsipida rutetcesnoc ,tema tis rolod muspi meroL " \
-	     "taiguef adauselam orebil tu merol siuq alluN	tile gnicsipida " \
-	     "rutetcesnoc ,tema tis rolod muspi meroL"
+		'Hello world! I am sorry.') == 'yrros ma I !dlrow olleH'
 
 
 def test_for_web3_dz4():
