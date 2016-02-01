@@ -42,3 +42,6 @@ def tests_for_web4_dz1():
 		'q': 25.0, 't': 25.0, 'y': 25.0, 'u': 25.0
 	}
 	assert sum(web4_dz1.frequency_letters("q TyU#!{}.").values()) == 100.0
+	assert web4_dz1.frequency_letters("приве") == {
+		'п': 20.0, 'р': 20.0, 'и': 20.0, 'в': 20.0, 'е': 20.0
+	}

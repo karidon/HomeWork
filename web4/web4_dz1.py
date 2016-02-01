@@ -23,14 +23,12 @@ def frequency_letters(text):
 	'''
 	Подсчитывает процентное соотношениек букв в тексте
 	:param text: вх текст
-	:return: проценты
+	:return: ключ - буква, значение - процент (до десятых)
 	'''
 	tmp = text.strip('.,?!-+=:;\'\"{}#').casefold()
 	tmp = ''.join(tmp.split())
 	l = len(tmp)
-
 	dic = {}
-
 	# Считает количество одной букв в тексте
 	for v in tmp:
 		dic[v] = dic.get(v, 0) + 1
