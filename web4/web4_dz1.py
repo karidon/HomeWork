@@ -30,11 +30,10 @@ def frequency_letters(text):
 	l = len(tmp)
 
 	dic = {}
-	arr = []
 
 	# Считает количество одной букв в тексте
-	for i in tmp:
-		dic[i] = dic.get(i, 0) + 1
+	for v in tmp:
+		dic[v] = dic.get(v, 0) + 1
 	# Считает процентное соотношение букв в тексте
 	for key, value in dic.items():
 		dic[key] = round(((value / l) * 100), 1)
