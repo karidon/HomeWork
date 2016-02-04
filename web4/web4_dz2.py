@@ -31,7 +31,7 @@ __date__ = '2016-02-04'
 def epilogue(text, limit=24):
 	'''
 	Обрезает текст по limit
-	:param text: текст
+	:param text: вх текс
 	:param limit: ограничение текста
 	:return: обрезанный текст по limit
 	'''
