@@ -28,7 +28,7 @@ __email__ = 'Genek_x@mail.ru'
 __date__ = '2016-02-04'
 
 
-def epilogue(text, limit=24):
+def epilogue(text, limit=0):
 	'''
 	Обрезает текст по limit
 	:param text: текст
@@ -37,16 +37,17 @@ def epilogue(text, limit=24):
 	'''
 	arr = text.split()
 	s = text[:limit]
+	eliment = '...'
 	count = 0
-	if len(text) <= limit:
+	if not limit or len(text) <= limit:
 		s = text
 	elif len(text) > limit > (len(arr[0]) + 1):
 		for value in text[limit::-1]:
 			if value != ' ':
 				count += 1
 			else:
-				s = text[:limit - count] + '...'
+				s = text[:limit - count] + eliment
 				break
 	else:
-		s = text[:limit - 3] + '...'
+		s = text[:limit - 3] + eliment
 	return s
