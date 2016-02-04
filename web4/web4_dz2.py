@@ -23,3 +23,30 @@ limit = 6
 output = "Pro..."
 '''
 
+__author__ = 'karidon'
+__email__ = 'Genek_x@mail.ru'
+__date__ = '2016-02-04'
+
+
+def epilogue(text, limit=24):
+	'''
+	Обрезает текст по limit
+	:param text: текст
+	:param limit: ограничение текста
+	:return: обрезанный текст по limit
+	'''
+	arr = text.split()
+	s = text[:limit]
+	count = 0
+	if len(text) <= limit:
+		s = text
+	elif len(text) > limit > (len(arr[0]) + 1):
+		for value in text[limit::-1]:
+			if value != ' ':
+				count += 1
+			else:
+				s = text[:limit - count] + '...'
+				break
+	else:
+		s = text[:limit - 3] + '...'
+	return s

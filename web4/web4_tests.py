@@ -7,9 +7,10 @@
 
 __author__ = 'karidon'
 __email__ = 'Genek_x@mail.ru'
-__date__ = '2016-02-01'
+__date__ = '2016-02-04'
 
 import web4_dz1
+import web4_dz2
 
 
 def tests_for_web4_dz1():
@@ -45,3 +46,13 @@ def tests_for_web4_dz1():
 	assert web4_dz1.frequency_letters("приве") == {
 		'п': 20.0, 'р': 20.0, 'и': 20.0, 'в': 20.0, 'е': 20.0
 	}
+
+
+def tests_for_web4_dz2():
+	"""Тесты задачи 2"""
+	text = "Proin eget tortor risus."
+	assert web4_dz2.epilogue(text) == "Proin eget tortor risus."
+	assert web4_dz2.epilogue(text, 24) == "Proin eget tortor risus."
+	assert web4_dz2.epilogue(text, 23) == "Proin eget tortor..."
+	assert web4_dz2.epilogue(text, 13) == "Proin eget..."
+	assert web4_dz2.epilogue(text, 6) == "Pro..."
