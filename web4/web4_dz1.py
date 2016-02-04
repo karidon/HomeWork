@@ -36,3 +36,35 @@ def frequency_letters(text):
 	for key, value in dic.items():
 		dic[key] = round(((value / l) * 100), 1)
 	return dic
+
+
+###################################################
+# Способ PyBursa
+###################################################
+
+import string
+from collections import Counter
+
+
+def percentage_1(text):
+	u"""Решение через простые итерации."""
+	symbol_counts = {}
+	for symbol in text.lower():
+		if symbol in string.ascii_lowercase:
+			symbol_counts[symbol] = symbol_counts.setdefault(symbol, 0) + 1
+
+	all_letters = float(sum(symbol_counts.values()))
+	symbol_percentage = {}
+	for k, v in symbol_counts.items():
+		symbol_percentage[k] = round(v / all_letters * 100, 1)
+	return symbol_percentage
+
+
+def percentage_2(text):
+	u"""Решение через инструменты стандартной библиотеки."""
+	symbol_counts = Counter(filter(
+		lambda s: s in string.ascii_letters, text.lower()))
+	all_letters = float(sum(symbol_counts.values()))
+	items = symbol_counts.items()
+	symbol_percentage = {k: round(v / all_letters * 100, 1) for k, v in items}
+	return symbol_percentage

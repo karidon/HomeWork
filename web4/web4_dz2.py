@@ -51,3 +51,22 @@ def epilogue(text, limit=0):
 	else:
 		s = text[:limit - 3] + eliment
 	return s
+
+
+###################################################
+# способ PyBursa
+##################################################
+
+def ellipsis_1(text, limit=0):
+	"""Решение через индексы концов слов..."""
+	assert limit not in [1, 2], "Invalid limit argument!"
+	ellipsis = "..."
+	if not limit or limit >= len(text):
+		return text
+	trimmed_text = ""
+	for i, word in enumerate(text.split()):
+		trimmed_text += word + " "
+		if len(trimmed_text[:-1] + ellipsis) > limit:
+			if i == 0:
+				return word[: limit - len(ellipsis)] + ellipsis
+			return trimmed_text[:-len(word) - 2] + ellipsis
