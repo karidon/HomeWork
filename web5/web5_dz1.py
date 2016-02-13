@@ -36,7 +36,7 @@ __author__ = 'karidon'
 __email__ = 'Genek_x@mail.ru'
 __date__ = '2016-02-08'
 
-from datetime import date
+from datetime import date, datetime
 
 
 class Person(object):
@@ -55,24 +55,26 @@ class Person(object):
 		'''
 		self.surname = surname
 		self.first_name = first_name
-		self.nickname = nickname
+		# Опциональный nickname
+		if nickname is not None:
+			self.nickname = nickname
 
 		# Разбираем строку birth_date
-		# TODO: подумать над вариантами
-		_arr = birth_date.split('-')
-		_year = int(_arr[0])
-		_month = int(_arr[1])
-		_day = int(_arr[2])
-
-		self.birth_date = date(_year, _month, _day)
+		try:
+			format_str = '%Y-%m-%d'
+			date_object = datetime.strptime(birth_date, format_str)
+			self.birth_date = date_object.date()
+		except ValueError:
+			raise ValueError("You must provide birth date in correct format "
+			                 "(YYYY-MM-DD)!")
 
 	def get_age(self):
 		'''
 		Считает возраст контакта в полных годах на дату вызова
 		:return: возвращает строку вида: "27"
 		'''
-		max = date.today()
-		res = max - self.birth_date
+		_max = date.today()
+		res = _max - self.birth_date
 		return str(res.days // 365)
 
 	def get_fullname(self):
@@ -80,4 +82,4 @@ class Person(object):
 		:return: строку, отражающая полное surname + first_name (фамилия + имя)
 		контакта
 		'''
-		return self.surname + ' ' + self.first_name
+		return '{0} {1}'.format(self.surname, self.first_name)
