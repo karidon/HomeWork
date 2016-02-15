@@ -15,7 +15,7 @@ def informations(libraly):
 	'''
 	Принимает название модуля и формирует справку по всем функциям принимаемого модуля
 	:param libraly: название модуля
-	:return: словарь
+	:return: dict
 	'''
 	dic = {}
 	for i in dir(libraly):

@@ -47,11 +47,11 @@ class Person(object):
 	def __init__(self, surname, first_name, birth_date, nickname=None):
 		'''
 
-		:param surname: строка - фамилия контактам (обязательный)
-		:param first_name: строка - имя контакта (обязательный)
-		:param birth_date: день рождения
-		:param nickname: строка - псевдоним (опциональный)
-		:return:
+		:param surname: str
+		:param first_name: str
+		:param birth_date: str
+		:param nickname: str
+		:return:str
 		'''
 		self.surname = surname
 		self.first_name = first_name
@@ -71,7 +71,7 @@ class Person(object):
 	def get_age(self):
 		'''
 		Считает возраст контакта в полных годах на дату вызова
-		:return: возвращает строку вида: "27"
+		:return: str
 		'''
 		_max = date.today()
 		res = _max - self.birth_date
@@ -79,7 +79,7 @@ class Person(object):
 
 	def get_fullname(self):
 		'''
-		:return: строку, отражающая полное surname + first_name (фамилия + имя)
-		контакта
+		Возвращает строку, отражающую полное имя (фамилия + имя) контакта
+		:return: str
 		'''
 		return '{0} {1}'.format(self.surname, self.first_name)

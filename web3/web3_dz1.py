@@ -21,8 +21,8 @@ __date__ = '2016-01-30'
 def number_glasnik(text):
 	'''
 	Считает максимальное количество гласных в слове
-	:param text: входящий текст
-	:return: максимальное количесвто глассных в одном слове
+	:param text: str
+	:return: int
 	'''
 	glasn = ('A', 'E', 'I', 'O', 'U', 'Y')
 	arr = text.upper().split()

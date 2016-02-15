@@ -22,8 +22,8 @@ __date__ = '2016-02-01'
 def frequency_letters(text):
 	'''
 	Подсчитывает процентное соотношениек букв в тексте
-	:param text: вх текст
-	:return: ключ - буква, значение - процент (до десятых)
+	:param text: str
+	:return: dict
 	'''
 	tmp = text.strip('.,?!-+=:;\'\"{}#').casefold()
 	tmp = ''.join(tmp.split())

@@ -28,8 +28,8 @@ def reversem(text):
 	- букв в словах;
 	- слов в предложениях;
 	- предложений в тексте.
-	:param text: техт
-	:return: текст модифицированный
+	:param text: str
+	:return: str
 	'''
 	a = []
 	str = text.strip(' \n\t')

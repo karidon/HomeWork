@@ -22,8 +22,8 @@ from functools import reduce
 def psevdosumma(number=0):
 	'''
 	Выдает сумму цифр из которых стостоит число
-	:param number: натуральное число
-	:return: сумма цифр
+	:param number: int
+	:return: int
 	'''
 	arr = []
 	m = list(str(abs(number)))

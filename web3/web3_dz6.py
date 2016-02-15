@@ -17,8 +17,8 @@ __date__ = '2016-01-30'
 def prime_numbers(number=20):
 	'''
 	Выводит натуральные простые числа.
-	:param numbers: количество чисел.
-	:return: список найденых протостых чисел.
+	:param numbers: int
+	:return: list
 
 	'''
 	number = abs(number)

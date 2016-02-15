@@ -20,8 +20,8 @@ __date__ = '2016-01-30'
 def long_word(text):
 	'''
 	Ищет максимальное длиное слова и выводит все максимальной длины слов
-	:param text: строка
-	:return: все максимальной длины слов
+	:param text: str
+	:return: str
 	'''
 	arr = text.strip('.,\'\"\n\t[]<>').split()
 

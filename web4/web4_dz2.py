@@ -31,9 +31,9 @@ __date__ = '2016-02-04'
 def epilogue(text, limit=0):
 	'''
 	Обрезает текст по limit
-	:param text: текст
-	:param limit: ограничение текста
-	:return: обрезанный текст по limit
+	:param text: str
+	:param limit: int
+	:return: str
 	'''
 	arr = text.split()
 	s = text[:limit]
