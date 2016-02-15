@@ -42,8 +42,8 @@ def modifier(filename):
 	'''
 	arr = []
 	with open(filename, 'r') as fp:
-		csv_obgect = csv.DictReader(fp)
-		for row in csv_obgect:
+		reader = csv.DictReader(fp)
+		for row in reader:
 			row['id'] = Person(row['surname'], row['name'], row['birthdate'],
 			                   row['nickname'])
 			arr.append(row['id'])
