@@ -37,3 +37,4 @@ class Choise(models.Model):
 		:return: str
 		'''
 		return self.choise_text
+
