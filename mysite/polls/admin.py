@@ -6,8 +6,7 @@ from .models import Question, Choise
 
 
 # class ChoiseInline(admin.StackedInline):
-class ChoiseInline(
-	admin.TabularInline):  # TabularInline делает компакнее вопросы
+class ChoiseInline(admin.TabularInline):  # TabularInline делает компакнее вопросы
 	'''
 	Формируте форму ответов
 	'''
